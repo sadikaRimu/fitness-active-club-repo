@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import Card from '../Card/Card';
+import ExerciseDetails from '../ExerciseDetails/ExerciseDetails';
 import './ExerciseList.css'
 
 const ExerciseList = () => {
@@ -30,7 +31,7 @@ const ExerciseList = () => {
                 </div>
             </div>
             <div>
-                <h3>Details List:</h3>
+                <ExerciseDetails></ExerciseDetails>
             </div>
         </div>
     );

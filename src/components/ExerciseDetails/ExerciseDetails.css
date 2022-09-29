@@ -1,0 +1,20 @@
+.break-time-container {
+    margin-bottom: 10px;
+    background-color: #e6e6e6;
+    padding: 25px;
+    border-radius: 10px;
+
+}
+
+.break-time {
+    background-color: blueviolet;
+    margin-right: 15px;
+    padding: 10px;
+    color: white;
+    font-size: 15px;
+    border-radius: 20px;
+}
+
+.break-time:hover {
+    background-color: violet;
+}
