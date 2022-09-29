@@ -9,7 +9,6 @@
     background-color: #e6e6e6;
     padding: 25px;
     border-radius: 20px;
-
 }
 
 .break-time {
@@ -46,6 +45,10 @@
 
 }
 
+.exercise-details {
+    margin-bottom: 30px;
+}
+
 .exercise-and-time-div {
     display: flex;
     justify-content: space-between;
@@ -56,4 +59,22 @@
     border-radius: 10px;
     margin-bottom: 10px;
     text-align: left;
+}
+
+.activity-btn-card {
+    width: 100%;
+    background: blueviolet;
+    border: none;
+    border-radius: 10px;
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.activity-btn-text {
+    color: white;
+    font-size: 18px;
 }

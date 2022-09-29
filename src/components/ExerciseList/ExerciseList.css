@@ -1,5 +1,6 @@
 .header {
     color: blueviolet;
+    margin-left: 50px;
 }
 
 .exercise-list-container {
@@ -12,4 +13,18 @@
     grid-template-columns: repeat(3, 1fr);
     gap: 45px;
     margin: 100px 50px;
+}
+
+/*responsive for mobile and tablates devices*/
+@media only screen and(min-width:576px) and(max-width:992) {
+    .card-list {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+
+    }
+
+    .exercise-list-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
 }

@@ -1,9 +1,16 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import { addToDb, getStoredExercise, setBreakTime } from '../../utilities/fakedb';
 import './ExerciseDetails.css'
 
 const ExerciseDetails = ({ exerciseTime }) => {
-    // console.log(props.exerciseTime);
-    //  const { workOut } = props.exerciseTime;
+    useEffect(() => {
+        const storedBreakTime = getStoredExercise();
+        if (storedBreakTime) {
+            document.getElementById('break-time-text').innerText = JSON.stringify(storedBreakTime) + " seconds";
+        }
+
+
+    }, [exerciseTime])
     let total = 0;
     for (const i of exerciseTime) {
         total = total + i.time;
@@ -12,6 +19,7 @@ const ExerciseDetails = ({ exerciseTime }) => {
         console.log(num);
         const breakTimeField = document.getElementById('break-time-text');
         breakTimeField.innerText = num + " seconds";
+        setBreakTime(num);
     }
     return (
         <div className='exercise-details-section'>
@@ -45,7 +53,7 @@ const ExerciseDetails = ({ exerciseTime }) => {
                     <button onClick={() => handleAddToBreak(50)} className='break-time'>50s</button>
                 </div>
             </div>
-            <div>
+            <div className='exercise-details'>
                 <h4>Exercise Details</h4>
                 <div className='exercise-and-time-div'>
                     <h4>Exercise Time</h4>
@@ -55,6 +63,11 @@ const ExerciseDetails = ({ exerciseTime }) => {
                     <h4>Break Time</h4>
                     <small id="break-time-text"> seconds  </small>
                 </div>
+            </div>
+            <div>
+                <button className='activity-btn-card'>
+                    <p className='activity-btn-text'>Activity Completed</p>
+                </button>
             </div>
         </div>
     );
