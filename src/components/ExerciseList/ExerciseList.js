@@ -9,6 +9,9 @@ const ExerciseList = () => {
             .then(res => res.json())
             .then(data => setExercise(data));
     }, [])
+    const handleAddToCard = (selectedExercise) => {
+        console.log(selectedExercise);
+    }
     return (
         <div className='exercise-list-container'>
             <div>
@@ -21,6 +24,7 @@ const ExerciseList = () => {
                         exercise.map(exercise => <Card
                             key={exercise.id}
                             exercise={exercise}
+                            handleAddToCard={handleAddToCard}
                         ></Card>)
                     }
                 </div>

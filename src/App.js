@@ -5,7 +5,7 @@ import ExerciseList from './components/ExerciseList/ExerciseList';
 
 function App() {
   return (
-    <div className="App">
+    <div>
       <ExerciseList></ExerciseList>
     </div>
   );

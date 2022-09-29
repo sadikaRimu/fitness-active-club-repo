@@ -12,3 +12,24 @@
     border-radius: 8px;
     margin: 7px;
 }
+
+.btn-card {
+    width: 100%;
+    background: blueviolet;
+    border: none;
+    border-radius: 0px 0px 8px 8px;
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-text {
+    color: white;
+    font-size: 18px;
+}
+
+.btn-card:hover {
+    background-color: violet;
+}
