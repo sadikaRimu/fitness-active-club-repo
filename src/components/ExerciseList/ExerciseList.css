@@ -1,6 +1,6 @@
 .header {
     color: blueviolet;
-    margin-left: 50px;
+    text-align: center;
 }
 
 .exercise-list-container {
@@ -16,7 +16,7 @@
 }
 
 /*responsive for mobile and tablates devices*/
-@media only screen and(min-width:576px) and(max-width:992) {
+@media only screen and (min-width: 576px) and (max-width: 992px) {
     .card-list {
         display: grid;
         grid-template-columns: repeat(1, 1fr);
