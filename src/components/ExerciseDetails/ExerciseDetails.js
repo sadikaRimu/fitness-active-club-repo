@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { addToDb, getStoredExercise, setBreakTime } from '../../utilities/fakedb';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import './ExerciseDetails.css'
 
 const ExerciseDetails = ({ exerciseTime }) => {
@@ -21,8 +23,12 @@ const ExerciseDetails = ({ exerciseTime }) => {
         breakTimeField.innerText = num + " seconds";
         setBreakTime(num);
     }
+    const toastNotification = () => {
+        toast.success("you completed Activity  successfully");
+    }
     return (
         <div className='exercise-details-section'>
+            <ToastContainer />
             <div>
                 <img src="../../images/rimu.jpg" alt="" />
                 <h3>Sadika Afrin Rimu</h3>
@@ -65,7 +71,7 @@ const ExerciseDetails = ({ exerciseTime }) => {
                 </div>
             </div>
             <div>
-                <button className='activity-btn-card'>
+                <button onClick={toastNotification} className='activity-btn-card'>
                     <p className='activity-btn-text'>Activity Completed</p>
                 </button>
             </div>
