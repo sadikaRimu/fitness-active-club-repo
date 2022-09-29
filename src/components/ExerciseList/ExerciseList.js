@@ -5,13 +5,19 @@ import './ExerciseList.css'
 
 const ExerciseList = () => {
     const [exercise, setExercise] = useState([]);
+    const [exerciseTime, setExreciseTime] = useState([]);
     useEffect(() => {
         fetch('data.json')
             .then(res => res.json())
             .then(data => setExercise(data));
+    }, []);
+    useEffect(() => {
+
     }, [])
     const handleAddToCard = (selectedExercise) => {
-        console.log(selectedExercise);
+        // console.log(selectedExercise);
+        const newExrecise = [...exerciseTime, selectedExercise];
+        setExreciseTime(newExrecise);
     }
     return (
         <div className='exercise-list-container'>
@@ -31,7 +37,9 @@ const ExerciseList = () => {
                 </div>
             </div>
             <div>
-                <ExerciseDetails></ExerciseDetails>
+                <ExerciseDetails
+                    exerciseTime={exerciseTime}
+                ></ExerciseDetails>
             </div>
         </div>
     );

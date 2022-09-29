@@ -5,10 +5,10 @@
 }
 
 .break-time-container {
-    margin-bottom: 10px;
+    display: flex;
     background-color: #e6e6e6;
     padding: 25px;
-    border-radius: 10px;
+    border-radius: 20px;
 
 }
 
@@ -18,7 +18,8 @@
     padding: 10px;
     color: white;
     font-size: 15px;
-    border-radius: 20px;
+    border: none;
+    border-radius: 30px;
 }
 
 .break-time:hover {
@@ -31,6 +32,7 @@
     padding-bottom: 15px;
     padding-left: 20px;
     border-radius: 10px;
+
 }
 
 .single-info {
@@ -42,4 +44,16 @@
     margin-right: 14px;
     margin-top: 0;
 
+}
+
+.exercise-and-time-div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #e6e6e6;
+    padding-right: 50px;
+    padding-left: 10px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    text-align: left;
 }

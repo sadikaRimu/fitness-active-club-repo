@@ -1,7 +1,18 @@
 import React from 'react';
 import './ExerciseDetails.css'
 
-const ExerciseDetails = () => {
+const ExerciseDetails = ({ exerciseTime }) => {
+    // console.log(props.exerciseTime);
+    //  const { workOut } = props.exerciseTime;
+    let total = 0;
+    for (const i of exerciseTime) {
+        total = total + i.time;
+    }
+    const handleAddToBreak = (num) => {
+        console.log(num);
+        const breakTimeField = document.getElementById('break-time-text');
+        breakTimeField.innerText = num + " seconds";
+    }
     return (
         <div className='exercise-details-section'>
             <div>
@@ -27,15 +38,23 @@ const ExerciseDetails = () => {
             <div>
                 <h4>Add A Break</h4>
                 <div className='break-time-container'>
-                    <small className='break-time'>10s</small>
-                    <small className='break-time'>20s</small>
-                    <small className='break-time'>30s</small>
-                    <small className='break-time'>40s</small>
-                    <small className='break-time'>50s</small>
+                    <button onClick={() => handleAddToBreak(10)} className='break-time'>10s</button>
+                    <button onClick={() => handleAddToBreak(20)} className='break-time'>20s</button>
+                    <button onClick={() => handleAddToBreak(30)} className='break-time'>30s</button>
+                    <button onClick={() => handleAddToBreak(40)} className='break-time'>40s</button>
+                    <button onClick={() => handleAddToBreak(50)} className='break-time'>50s</button>
                 </div>
             </div>
             <div>
                 <h4>Exercise Details</h4>
+                <div className='exercise-and-time-div'>
+                    <h4>Exercise Time</h4>
+                    <small>{total} seconds  </small>
+                </div>
+                <div className='exercise-and-time-div'>
+                    <h4>Break Time</h4>
+                    <small id="break-time-text"> seconds  </small>
+                </div>
             </div>
         </div>
     );
