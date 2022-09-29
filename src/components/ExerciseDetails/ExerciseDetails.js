@@ -24,7 +24,7 @@ const ExerciseDetails = ({ exerciseTime }) => {
     return (
         <div className='exercise-details-section'>
             <div>
-                <img src="../../../images/rimu.jpg" alt="" />
+                <img src="../../images/rimu.jpg" alt="" />
                 <h3>Sadika Afrin Rimu</h3>
             </div>
             <div className='personal-info'>
